@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "notebooks"
+version = "0.1.0"
+description = ""
+authors = ["Caleb Gasser <1561693+calebgasser@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+jupyterlab = "^4.0.10"
+ipywidgets = "^8.1.1"
+numpy = "^1.26.3"
+pandas = "^2.1.4"
+matplotlib = "^3.8.2"
+torch = {version = ">=2.1.2+cu121", source = "pytorch"}
+torchvision = {version = "^0.16.2+cu121", source = "pytorch"}
+scipy = "^1.11.4"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
